@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./style.css">
+    <title>Karma 8</title>
+</head>
+<body>
+    <header class="header">
+        <img src="assets/LogoType.svg" alt="Logo" />
+        <div class="header-info">
+            <div>Storage</div>
+            <div>CDN (soon)</div>
+            <div>Media Streaming</div>
+        </div>
+        <div class="header-button">
+            <button class="header-button-log-in">Log in</button>
+            <button class="header-button-sign-up">Sign up</button>
+        </div>
+    </header>
+    <main class="main">
+        <section class="section-general-info">
+            <div class="section-general-info-container">
+                <div>S3-compatible secure cloud storage</div>
+                <div>at a fraction of the cost</div>
+                <div>Accessible enterprise-grade data storage optimized for high performance and committed to genuine privacy</div>
+                <button>Try for free</button>
+            </div>
+            <img src="assets/Group.svg" alt="Group" />
+        </section>
+        <section class="section-description">
+            <div>Simple pricing</div>
+            <div>Rabata.io Cloud delivers top-tier performance at competitive pricing. Learn Our Approach</div>
+        </section>
+        <section class="section-calculator">
+            <div class="section-calculator-checkbox">
+                <div class="section-calculator-checkbox-container">
+                    <input type="checkbox" id="S3" class="section-calculator-input"/>
+                    <label for="S3">
+                        S3 - $0.015
+                    </label>
+                    <div>High performance S3-compatible storage for your <br /> applications for $0.015/GB.</div>
+                </div>
+                <div class="section-calculator-checkbox-container">
+                    <input type="checkbox" id="Backup" class="section-calculator-input"/>
+                    <label for="Backup">
+                        Backup - $59
+                    </label>
+                    <div>S3 compatible hot-backup for $59 per 10 TB of storage.</div>
+                </div>
+            </div>
+            <div class="section-calculator-slider">
+                <div class="section-calculator-slider-data">
+                    <div>
+                        <div class="section-calculator-slider-title">
+                            <div>Total Data Stored</div>
+                            <div>
+                                <output class="section-calculator-slider-count" id="data_stored" name="data_stored" for="dataStoredInput">0</output>
+                                <span class="section-calculator-slider-count">TB</span>
+                            </div>
+                        </div>
+                        <input type="range" id="dataStoredInput"
+                               name="dataStoredInput" min="1" max="1000" value="30"
+                               oninput="data_stored.value=dataStoredInput.value"
+                               list="data-stored-list"
+                               class="section-calculator-slider-data-input data-stored"
+                               data-type="stored">
+                        <datalist id="data-stored-list">
+                            <option>1 TB</option>
+                            <option>1 PB</option>
+                        </datalist>
+                    </div>
+                    <div>
+                        <div class="section-calculator-slider-title">
+                            <div>Monthly Downloaded Data</div>
+                            <div>
+                                <output class="section-calculator-slider-count" id="downloaded_data" name="downloaded_data" for="downloadedDataInput">0</output>
+                                <span class="section-calculator-slider-count">TB</span>
+                            </div>
+                        </div>
+                        <input type="range" id="downloadedDataInput" name="downloadedDataInput"
+                               min="1" max="1000" value="60"
+                               list="downloaded-data-list"
+                               oninput="downloaded_data.value=downloadedDataInput.value"
+                               class="section-calculator-slider-data-input downloaded-data"
+                               data-type="downloaded">
+                        <datalist id="downloaded-data-list">
+                            <option>1 TB</option>
+                            <option>1 PB</option>
+                        </datalist>
+                    </div>
+                </div>
+                <div class="section-calculator-slider-logo">
+                    <div class="section-calculator-slider-container">
+                        <div class="section-calculator-slider-wrapper logotype">
+                            <div>Logotype</div>
+                            <div class="section-calculator-slider-amount">
+                                <span>$</span>
+                                <span class="logo">0</span>
+                                <span>/ yr.</span>
+                            </div>
+                        </div>
+                        <progress class="progress-total logotype" data-company="logotype" />
+                    </div>
+                    <div class="section-calculator-slider-container">
+                        <div class="section-calculator-slider-wrapper">
+                            <div>Amazon S3</div>
+                            <div class="section-calculator-slider-amount">
+                                <span>$</span>
+                                <span class="amazon">0</span>
+                                <span>/ yr.</span>
+                            </div>
+                        </div>
+                        <progress class="progress-total" data-company="amazon" />
+                    </div>
+                    <div class="section-calculator-slider-container">
+                        <div class="section-calculator-slider-wrapper">
+                            <div>Microsoft</div>
+                            <div class="section-calculator-slider-amount">
+                                <span>$</span>
+                                <span class="microsoft">0</span>
+                                <span>/ yr.</span>
+                            </div>
+                        </div>
+                        <progress class="progress-total" data-company="microsoft" />
+                    </div>
+                    <div class="section-calculator-slider-container">
+                        <div class="section-calculator-slider-wrapper">
+                            <div>Google Cloud</div>
+                            <div class="section-calculator-slider-amount">
+                                <span>$</span>
+                                <span class="google">0</span>
+                                <span>/ yr.</span>
+                            </div>
+                        </div>
+                        <progress class="progress-total" data-company="google" />
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section-buttons">
+            <button>Try for free</button>
+            <button>Contact our dedicated experts team</button>
+        </section>
+    </main>
+    <script async src="script.js"></script>
+</body>
+</html>
